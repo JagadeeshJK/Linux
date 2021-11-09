@@ -1,0 +1,116 @@
+TRY -142
+
+1.
+echo "enter 2 numbers"
+read num1
+read num2
+sum=`expr $num1 + $num2`
+echo "the sum=$sum"
+sub=`expr $num1 - $num2`
+echo "the sub=$sub"
+div=`expr $num1 / $num2`
+echo "the div=$div"
+mod=`expr $num1 % $num2`
+echo "the mod=$mod"
+
+2.
+read a b
+echo $a $b
+
+3.
+write user1
+Hello
+
+TRY -161
+
+1.
+read num1
+read num2
+read num3
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+then 
+  echo $num1
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ] 
+then
+  echo $num2
+else
+  echo $num3
+fi
+
+2.
+read file
+if test -s $file
+then
+  echo "file exists and is not empty"
+elif test -f $file
+then
+  echo "file exists and it is empty"
+else
+  echo "file dosen't exists"
+fi
+
+3.
+c=0
+echo "What is the capital of Andhra Pradesh"
+read a
+echo "What is the capital city of India"
+read b
+echo "What is the capital city of Telangana"
+read c
+if a="Visakhapatnam"
+then
+i=$((i+1))
+fi
+if b="Delhi"
+then
+i=$((i+1))
+fi
+if c="Hyderabad"
+then
+i=$((i+1))
+fi
+echo "$i/3"
+
+TRY - 169
+
+2.
+read x
+c=0
+until [ $x -eq 0 ]
+do
+ c=`expr $c + $x `
+ read x
+done
+echo $c
+
+3.
+var=`cat ./file`
+for i in $var
+do
+  var2=`echo $i|wc -c`
+  var2=$((var2-1))
+  echo $i $var2
+done
+
+TRY - 176
+
+1.
+read a
+while [ $a != "EOF" ]
+do
+case $a in
+ [0-9]*) echo "Number";;
+ [a-z]*) echo "Alphabet";;
+ [A-Z]*) echo "Alphabet";;
+ *) echo "special character";;
+esac
+read a
+done
+
+2.
+read a
+echo $a
+until [ $a = "Bangalore" ]
+do
+  read a
+done
