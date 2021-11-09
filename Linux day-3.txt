@@ -110,7 +110,7 @@ done
 2.
 read a
 echo $a
-until [ $a = "Bangalore" ]
+until [ $a = "Delhi" ]
 do
   read a
 done
