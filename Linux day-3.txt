@@ -18,8 +18,9 @@ read a b
 echo $a $b
 
 3.
-write user1
-Hello
+echo "username"
+read uname
+qu=`write $uname`
 
 TRY -161
 
